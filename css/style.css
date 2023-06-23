@@ -19,11 +19,6 @@
     width: 1200px;
 }
 
-.hidden-text {
-    position: absolute;
-    top: -20000px;
-}
-
 .title {
     position: relative;
     font-family: Playfair Display;
@@ -35,14 +30,14 @@
 .title::after {
     content: "";
     position: absolute;
-    bottom: 3px;
-    left: 102%;
+    bottom: 2px;
+    left: 103%;
     transform: translateX(-50%);
     width: 6px;
     height: 6px;
     background-color: #e8bf5d;
     border-radius: 50%;
-  }
+}
 
 .navigation-list {
     display: flex;
@@ -52,6 +47,7 @@
     font-family: Open Sans;
     font-size: 14px;
     letter-spacing: 0.56px;
+    color: #111;
     cursor: pointer;
 }
 
@@ -60,6 +56,8 @@
 }
 
 .navigation-item:first-child {
+    padding-left: 11px;
+    padding-right: 11px;
     padding-bottom: 5px;
     border-bottom: 5px solid #e8bf5d;
 }
@@ -101,7 +99,8 @@
 }
 
 .btn-tittle {
-    padding: 19px 40px 19px 40px;
+    width: 181px;
+    height: 50px;
     border-radius: 25px;
     font-family: Playfair Display;
     font-size: 16px;
@@ -111,24 +110,32 @@
 }
 
 .history-section { 
-    padding: 81px 0px 96px 100px;
+    display: flex;
+    justify-content: center;
+    padding: 81px 0px 96px;
 }
 
-.counter {
-    --number: "3";
+.history-content {
+    min-width: 1200px;
+    max-width: 1200px;
 }
 
-.number {
+.container {
+    border-left: 5px solid #e8bf5d;
+}
+
+body {
+    counter-reset: list;
+}
+
+.container:before {
+    counter-increment: list;
+    content: counter(list, decimal-leading-zero)"";
     position: absolute;
-    margin-top: -28px;
+    margin-top: -40px;
     font-family: Open Sans;
     font-size: 194.5px;
     opacity: 0.1;
-}
-
-.border-line {
-    border-left: 5px solid #e8bf5d;
-    padding-left: 8px;
 }
 
 .subtittle {
@@ -203,8 +210,15 @@
 }
 
 .practice-section {
-    padding: 81px 0px 96px 100px;
+    display: flex;
+    justify-content: center;
+    padding: 81px 0px 96px;
     background-color: #111;
+}
+
+.practice-content {
+    min-width: 1200px;
+    max-width: 1200px;
 }
 
 .practice-subtittle {
@@ -296,21 +310,33 @@
 }
 
 .attorney-section {
-    padding: 81px 0px 96px 100px;
+    display: flex;
+    justify-content: center;
+    padding: 81px 0px 96px;
+}
+
+.attorney-content {
+    min-width: 1200px;
+    max-width: 1200px;
 }
 
 .attorney-container {
     display: flex;
+    justify-content: space-between;
+    width: 1200px;
 }
 
 .attorney-worker {
     width: 270px;
     height: 300px;
-    margin: 0px 30px 0px 0px;
 }
 
-.attorney-worker:last-child:nth-child(4) {
+.wrapper:last-child:nth-child(4) {
     margin-right: 0;
+}
+
+.wrapper {
+    flex-wrap: wrap;
 }
 
 .attorney-img {
@@ -337,11 +363,18 @@
 }
 
 .clients-section {
-    padding: 81px 0px 96px 100px;
+    display: flex;
+    justify-content: center;
+    padding: 81px 0px 96px;
     background: url(../img/background-logo.png);
     background-color: #111;
     background-size: cover;
     background-position: center;
+}
+
+.clients-content {
+    min-width: 1200px;
+    max-width: 1200px;
 }
 
 .clients-container {
@@ -396,17 +429,25 @@
 }
 
 .publications-section {
-    padding: 81px 0px 96px 100px;
+    display: flex;
+    justify-content: center;
+    padding: 81px 0px 96px;
+}
+
+.publications-content {
+    min-width: 1200px;
+    max-width: 1200px;
 }
 
 .publications-container {
     display: flex;
+    justify-content: space-between;
+    width: 1200px;
 }
 
 .publications-worker {
     width: 370px;
     height: 299px;
-    margin-right: 30px;
     margin-bottom: 30px;
 }
 
@@ -457,16 +498,28 @@
 
 .publications-info {
     display: flex;
-    justify-content: space-between;
     width: 367px;
     border-bottom: 3px solid #e8bf5d;
 }
 
+.publications-chat {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+}
+
 .comment {
+    margin-right: 149px;
     margin-bottom: 29px;
     font-family: Open Sans;
     line-height: 1.94;
     letter-spacing: 0.64px;
+}
+
+.publications-share {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
 }
 
 .share {
@@ -477,8 +530,15 @@
 }
 
 .question-section {
-    padding: 81px 0px 96px 100px;
+    display: flex;
+    justify-content: center;
+    padding: 81px 0px 96px;
     background-color: #111;
+}
+
+.question-content {
+    min-width: 1200px;
+    max-width: 1200px;
 }
 
 .question-rectangle {
@@ -491,15 +551,21 @@
 }
 
 .question-text {
-  font-family: Open Sans;
-  font-size: 14px;
-  line-height: 2.21;
-  letter-spacing: 0.56px;
+    font-family: Open Sans;
+    font-size: 14px;
+    line-height: 2.21;
+    letter-spacing: 0.56px;
 }
 
 .contact-section {
-    height: 800px;
-    padding: 81px 0px 96px 100px;
+    display: flex;
+    justify-content: center;
+    padding: 81px 0px 96px;
+}
+
+.contact-content {
+    min-width: 1200px;
+    max-width: 1200px;
 }
 
 .contact-rectangle {
@@ -518,56 +584,55 @@
 .contact-rectangle input {
     width: 350px;
     margin-bottom: 40px;
-    border: none;
-    opacity: 0.2;
-    border-bottom: 1px solid #333;
-}
-
-.contact-rectangle label {
     font-family: Open Sans;
     font-style: italic;
     letter-spacing: 0.56px;
+    border: none;
+    opacity: 0.3;
+    border-bottom: 1px solid #333;
     color: #b9b9b9;
 }
 
 .contact-rectangle textarea {
     width: 350px;
-    margin-top: 30px;
-    margin-bottom: 14px;
+    max-height: 100px;
+    margin-top: 70px;
+    margin-bottom: 37px;
+    font-family: Open Sans;
+    font-style: italic;
     border: none;
-    opacity: 0.2;
+    letter-spacing: 0.56px;
+    opacity: 0.3;
+    resize: none;
     border-bottom: 1px solid #333;
 }
 
 .contact-map {
-    width: 362.8px;
-    height: 362.8px;
-    margin: 0px 55px 0px 200px;
+    margin: 0px 55px 20px 200px;
     box-shadow: -20px 20px 1px #e8bf5d;
-}
-
-.contact-img {
-    width: 112%;
 }
 
 .footer-section {
     display: flex;
     justify-content: center;
-    padding: 32px 0px 32px 0px;
+    padding: 32px 32px;
     background-color: #111;
 }
 
 .footer-content {
     display: flex;
+    align-items: center;
     width: 1200px;
 }
 
 .footer-text {
+    margin-right: 5px;
     font-family: Playfair Display;
     color: #b5b5b5;
 }
 
 .text-style-1 {
+    margin-right: 5px;
     font-family: Open Sans;
     color: #b5b5b5;
 }
@@ -578,9 +643,7 @@
 }
 
 .social-networks {
-    width: 113px;
-    height: 16px;
-    margin: 1px 0 0 700px;
+    display: flex;
 }
 
 .social-networks-img {
